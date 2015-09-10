@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<script>
+			
+			document.addEventListener("DOMContentLoaded", go);
+			
+			
+			function go() {
+				/*var val1 = document.getElementById('val1');
+				var val2 = document.getElementById('val2');
+				print(add(parseInt(val1.value), parseInt(val2.value)));*/
+				var results = document.body;
+				results.innerHTML = '';
+				results.appendChild(createColoredDiv('red'));
+				results.appendChild(createColoredDiv('blue'));
+				results.appendChild(createColoredDiv('pink'));
+			}
+			
+			function createColoredDiv(color) {
+				var div = document.createElement('div');
+				div.innerText = 'Hello World!';
+				div.style.fontSize = '50px';
+				div.style.color = color;
+				
+				return div;
+			}
+			
+			function add(a,b){
+				return a+b;
+			}
+			
+			function print(val) {
+				alert(document.querySelectorAll('.results').length);
+			}
+		</script>
+	</head>
+	<body>
+		<!--<button onclick="go();">GO</button>
+		<input type="text" id="val1" value="67">
+		<input type="text" id="val2" value="5467">
+		<div id="mydiv" class="results">
+			
+		</div>!-->
+	</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "DepotUExamples",
+  "version": "0.0.0",
+  "dependencies": {
+    "less": "latest"
+  },
+  "devDependencies": {
+    "nodemon": "latest"
+  },
+  "scripts": {
+	  "less": "lessc less/styles.less  less/styles.css && lessc dom/dom.less dom/dom.css",
+	  "watch:less": "nodemon -q -w . -e less -x npm run less"
+  }
+}
