@@ -1,0 +1,82 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="styles.css">
+		<!--<script>
+			
+			var arr = ['Lion', 'zebra', 'antelope', 'bear', 'giraffe', 'antelope', 'monkey'];
+			//console.log(arr.sort());
+			console.log(arr.sort(function(a, b){
+				if(a.toUpperCase() < b.toUpperCase()) {
+					return 1;
+				}
+				if(a.toUpperCase() > b.toUpperCase()) {
+					return -1;
+				}
+				return 0;
+			}));
+			
+			var objarr = [
+				{ prop1: 1234, prop2: 3 },
+				{ prop1: 567, prop2: 7 },
+				{ prop1: 234, prop2: 1}
+			];
+			console.log(objarr.slice().sort());
+			
+			console.log(objarr.sort(function(a,b){
+				if(a.prop2 < b.prop2) { return 1; }
+				if(a.prop2 > b.prop2) { return -1; }
+				return 0;
+			}));
+			
+			var multiarr = [
+				[[8,9],2,3,4],
+				[4,3,2,1]
+			];
+			
+			console.log(multiarr[0][0][1]);
+			console.log(multiarr[0][1]);
+			console.log(multiarr[1][0]);
+			
+		</script>-->
+		<!--<script>
+			var obj = {
+				name: 'Matt',
+				city: 'Homewood',
+				myfunc: function() {
+					
+					var newfunc = function() {
+						console.log(this);
+					}
+					newfunc();
+					newfunc.call(this);
+					return this.name;
+				}
+			};
+			
+			obj.myfunc();
+			
+			//console.log(obj.myfunc.call({ name: 'David' }));
+			//var newfunc = obj.myfunc.bind({ name: 'Haley' });
+			//console.log(newfunc());
+			
+			//console.log(this);
+			
+			
+			
+		</script>-->
+		<!--<script src="library.js"></script>-->
+		<script src="week2day2.js"></script>
+		<!--<script>
+			library.count();
+			library.count();
+			library.count();
+			library.count();
+			
+		</script>-->
+	</head>
+	<body onload="myload();">
+		<div class="box"></div>
+		<div class="box"></div>
+		<div id="mydiv"></div>
+	</body>
+</html>
