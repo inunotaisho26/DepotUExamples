@@ -1,0 +1,14 @@
+{
+  "name": "myexpress",
+  "version": "1.0.0",
+  "description": "express hello world",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Platypi <support@getplatypi.com> (http://getplatypi.com)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
