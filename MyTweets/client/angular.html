@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="./css/styles.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+		<script src="js/angular.js"></script>
+	</head>
+	<body ng-app="MyApp" ng-controller="TweetsController">
+		<h1>{{user}}'s Tweets</h1>
+		<div class="container">
+			<div class="row">
+				<span>User: </span>
+				<input type="text" ng-model="user" />
+			</div>
+			<div class="row">
+				<span>Tweet: </span>
+				<input type="text" ng-model="text" />
+				<button ng-click="sendTweet()">Send!</button>
+			</div>
+			<ul>
+				<li class="{{ tweet.userName === 'bot' ? 'red' : 'blue' }}" ng-repeat="tweet in tweets">
+					{{tweet.userName}}: {{tweet.text}}
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
