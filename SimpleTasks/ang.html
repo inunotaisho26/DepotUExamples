@@ -1,0 +1,63 @@
+<html x-ng-app="myApp">
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="simpletasks.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+		<script src="ang.js"></script>
+	</head>
+	<body ng-controller="examplesController">
+		<div class="container">
+			<h1>Simple Tasks Examples with Angular</h1>
+
+			<div class="row createlist-example example-border">
+				<div class="col-md-6">
+					<h2>Create List</h2>
+					<ul>
+						<li ng-repeat="name in names">{{name}}</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="row addspan-example example-border">
+				<div class="col-md-6">
+					<h2>Add Span</h2>
+					<div class="addspan-div" ng-bind-html="myContent">
+						 
+					</div>
+				</div>
+			</div>			
+
+			<div class="row random-example example-border">
+				<div class="col-md-6">
+					<h2>Random Colors</h2>
+					<p ng-click="getRandomColor()" style="color: {{randomColor}}">Bacon ipsum dolor amet pig porchetta cupim, fatback capicola corned beef filet mignon short ribs ground round shank beef turducken. Ribeye landjaeger jowl, ham picanha chicken doner. Short loin flank tail turducken andouille jowl pork belly. Ground round tenderloin shank cupim jowl chicken kevin boudin hamburger. Landjaeger shankle pork ball tip pancetta filet mignon boudin. Shankle tail porchetta venison salami short ribs beef shank jerky pancetta meatball tongue ribeye.</p>
+				</div>
+			</div>
+						
+			<div class="row btn-example example-border">
+				<div class="col-md-6">
+					<h2>Button Click Example</h2>
+					<button class="btn btn-primary" ng-click="clickMe()">Click Me!</button>
+				</div>
+			</div>
+			
+			<div class="row alert-example example-border">
+				<div class="col-md-6">
+					<h2>Alert with Textbox</h2>
+					<input id="txtMessage" class="txt" type="text" placeholder="message" ng-model="message">
+					<button class="btn btn-primary" ng-click="alertInput()">Click Me!</button>
+				</div>
+			</div>
+
+			<div class="row hover-example example-border">
+				<div class="col-md-6">
+					<h2>Hover Effects</h2>
+					<div ng-click="showHover();" ng-class="{ darksalmon: hover }" ng-mouseover="hover = true" ng-mouseleave="hover = false" class="color-div">
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</body>
+</html>
