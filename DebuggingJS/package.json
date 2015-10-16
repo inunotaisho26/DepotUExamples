@@ -1,0 +1,26 @@
+{
+	"name": "watch-files",
+	"version": "1.0.0",
+	"private": true,
+	"dependencies": {
+		"less": "latest",
+		"concurrently": "latest",
+		"mkdirp": "latest",
+		"stringify": "latest"
+	},
+	"devDependencies": {
+		"watchify": "latest",
+		"typescript": "latest",
+		"nodemon": "latest"
+	},
+	"scripts": {
+		"build": "npm run less && npm run typescript",
+		"less": "lessc app/styles.less app/dist/app.css",
+		"start": "concurrent -r -k \"npm run watch\" \"http-server -p 3000 app\"",
+		"ts": "tsconfig && tsc app/ref.ts --out app/dist/app.js",
+		"watch:less": "nodemon -w . -e less -x npm run less",
+		"watch:ts": "npm run ts -- -w",
+		"watch:bundle": "watchify app/app.js -d -t stringify -o app/dist/app.js -v",
+		"watch": "npm run ts && concurrent -r -k \"npm run watch:bundle\" \"npm run watch:ts\" \"npm run watch:less\""
+	}
+}

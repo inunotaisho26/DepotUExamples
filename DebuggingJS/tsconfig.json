@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "ES5",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": false,
+        "watch": false
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "filesGlob": [
+        "app/**/*.ts",
+        "typings/tsd.d.ts"
+    ],
+    "files": [
+        "typings/tsd.d.ts",
+        "app/app.ts",
+        "app/ref.ts",
+        "app/views/details/details.controller.ts",
+        "app/views/home/home.controller.ts"
+    ]
+}
